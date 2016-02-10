@@ -85,7 +85,7 @@ int execute_external(char *args[]) {
 int main(int argc, char *argv[]) {
     // Check if the OS is linux, and exit if not.
     if (!OSCOMPAT) {
-        perror("Platform not supported. Please use a linux based OS to run this.");
+        printf("Platform not supported. Please use a linux based OS to run this.");
         return EXIT_FAILURE;
     }
 
@@ -131,7 +131,7 @@ int main(int argc, char *argv[]) {
         return execute_external(run_args);
 
     } else {
-        perror("\nNo arguments provided.");
+        printf("\nNo arguments provided.");
         return help();
     }
 }
